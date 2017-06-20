@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<head>
+<title>Meet Up</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<style>
+#map {
+  height: 300px;
+  width: 80%;
+ }
+ </style>
+</head>
+<body onload="initialize();" id="top">
+<!-- Header Starts Here -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">     
+    <div id="logo" class="fl_left">
+      <h1><a href="index.html">Meet Up - Events, People, Life</a></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a class="active" href="#">About</a></li>
+        <li><a class="drop" href="#">Events</a>
+          <ul>
+            <li><a href="#">Parties and Nightlife</a></li>
+            <li><a class="drop" href="#">Technology</a>
+              <ul>
+                <li><a href="#">Tech Meetups</a></li>
+                <li><a href="#">Tech Tutorials</a></li>
+                <li><a href="#">Hackahons</a></li>
+              </ul>
+            </li>
+            <li><a class="drop" href="#">Outdoors</a>
+             <ul>
+                <li><a href="#">Trekking</a></li>
+                <li><a href="#">Kayaking</a></li>
+                <li><a href="#">Water Sports</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a class="active" href="#">People</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+
+<div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/Tech_Event2.jpg');">
+  <div id="pageintro" class="hoc clear">     
+    <div class="flexslider basicslider">
+      <ul class="slides">
+        <li>
+          <article>
+            <h3 class="heading">Algorithmic Design Thinking</h3>
+            <h3 class="heading2">Explore the world of Algortihms.</h3>
+            <footer><a class="btn" href="#">Join Meetup</a></footer>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Beginning of the Content Page -->
+<div class="wrapper bgded overlay light" style="background-color:white;">
+  <section class="hoc container clear">
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h3 class="heading" style="font-size:40px">Algorithmic Design Thinking</h3>
+    </div>
+    <!-- This contains Time, Location on one half and People Attending on the other -->
+    <!-- Time, Location on the left -->
+    <div class="one_half first">
+      <h6 class="heading">Time and Location Information</h6>
+      <ul class="nospace btmspace-30 linklist contact">
+        <li style="font-size:15px"><i class="fa fa-calendar" style="font-size:15px"></i>
+          25<sup>th</sup> June, 2017  9:00AM - 5:00PM
+        </li>
+        <li style="font-size:15px"><i class="fa fa-map-marker" style="font-size:15px"></i>
+          Park Plaza Bengaluru , East Bangalore
+        </li>
+      </ul>
+    </div>
+    <!-- People Attending on the right -->
+    <div class="one_half">
+      <h6 class="heading">People Attending</h6>
+      <ul class="nospace linklist">
+        <li><i class="fa fa-male"></i>
+          Rohan
+        </li>
+        <li><i class="fa fa-male"></i>
+          Shetty
+        </li>
+        <li><i class="fa fa-female"></i>
+          Sherry
+        </li>
+        <li><i class="fa fa-male"></i>
+          Rob
+        </li>
+        <li><i class="fa fa-female"></i>
+          Marilyn
+        </li>
+      </ul>
+    </div>
+    <!-- Map title -->
+    <div><br><br><br><br><br><br>
+      <h6 class="heading">Find the Event on the Map</h6>
+    </div>
+    <!-- Google Maps API -->
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk9_psu_rF5vJPhAOa4bdUc2F--qgvK1c&callback=initMap">
+    </script>
+    <!-- Google Maps API ends here -->
+    <!-- Section explaining About The Event -->
+    <div class="block clear">
+        <div><br></div>
+      <h6 class="heading">About the Event</h6>
+      <ul class="nospace linklist">
+        <li>
+          <p class="nospace">This UnPluggd, we take you back to the beginning. That is, how to build a great company! 
+          Attended by geeks, entrepreneurs, investors and product/marketing teams, UnPluggd breaks through the clutter – we promise you will go back feeling inspired and awesome!
+
+          The company has been through a series of events – right from lack of planning to pure execution focus - and now, growth, growth, and growth.
+
+          Meet Sidharth and Gaurav at UnPluggd, India’s most amazing startup, and product conference!</p>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Content Ends Here -->
+<!-- Footer Starts Here -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_third first">
+      <h6 class="heading">Cities</h6>
+      <ul class="nospace btmspace-30 linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          Bangalore, Hyderabad
+        </li>
+        <li><i class="fa fa-map-marker"></i>
+          Chennai, Delhi
+        </li>
+        <li><i class="fa fa-map-marker"></i>
+          Mumbai, Pune
+        </li>
+        <li><i class="fa fa-map-marker"></i>
+          Kolkata, Goa
+        </li>
+      </ul>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fa fa-vk"></i></a></li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">In The News</h6>
+      <ul class="nospace linklist">
+        <li>
+          <article>
+            <h2 class="nospace font-x1"><a href="#">Meet Up expands to 4 more Cities.</a></h2>
+            <time class="font-xs block btmspace-10" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2017</time>
+            <p class="nospace">Meet Up expands to 4 new cities - Pune, Mumbai, Kolkata and Goa. [&hellip;]</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h2 class="nospace font-x1"><a href="#">Meet Up reaches 50,000+ users.</a></h2>
+            <time class="font-xs block btmspace-10" datetime="2045-04-05">Tuesday, 2<sup>th</sup> April 2017</time>
+            <p class="nospace">Meet Up reaches a milestone - 50,000 users, and counting. [&hellip;]</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">OUR NEWSLETTER</h6>
+      <p class="nospace btmspace-30">Get weekly updates of great events in your city.</p>
+      <form method="post" action="#">
+        <fieldset>
+          <legend>Newsletter:</legend>
+          <input class="btmspace-15" type="text" value="" placeholder="Name">
+          <input class="btmspace-15" type="text" value="" placeholder="Email">
+          <button type="submit" value="submit">Subscribe</button>
+        </fieldset>
+      </form>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Meet Up, Inc.</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+<script src="../layout/scripts/jquery.flexslider-min.js"></script>
+</body>
+</html>
